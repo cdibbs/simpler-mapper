@@ -1,9 +1,9 @@
-[![npm version](https://badge.fury.io/js/simple-mapper.svg)](https://badge.fury.io/js/simple-mapper)
-[![Build Status](https://travis-ci.org/ossplz/simple-mapper.svg?branch=master)](https://travis-ci.org/ossplz/simple-mapper)
-[![dependencies Status](https://david-dm.org/ossplz/simple-mapper/status.svg)](https://david-dm.org/ossplz/simple-mapper)
-[![devDependencies Status](https://david-dm.org/ossplz/simple-mapper/dev-status.svg)](https://david-dm.org/ossplz/simple-mapper?type=dev)
-[![codecov](https://codecov.io/gh/ossplz/simple-mapper/branch/master/graph/badge.svg)](https://codecov.io/gh/ossplz/simple-mapper)
-[![Greenkeeper badge](https://badges.greenkeeper.io/ossplz/simple-mapper.svg)](https://greenkeeper.io/)
+[![npm version](https://badge.fury.io/js/simpler-mapper.svg)](https://badge.fury.io/js/simpler-mapper)
+[![Build Status](https://travis-ci.org/cdibbs/simpler-mapper.svg?branch=master)](https://travis-ci.org/cdibbs/simpler-mapper)
+[![dependencies Status](https://david-dm.org/cdibbs/simpler-mapper/status.svg)](https://david-dm.org/cdibbs/simpler-mapper)
+[![devDependencies Status](https://david-dm.org/cdibbs/simpler-mapper/dev-status.svg)](https://david-dm.org/cdibbs/simpler-mapper?type=dev)
+[![codecov](https://codecov.io/gh/cdibbs/simpler-mapper/branch/master/graph/badge.svg)](https://codecov.io/gh/cdibbs/simpler-mapper)
+[![Greenkeeper badge](https://badges.greenkeeper.io/cdibbs/simpler-mapper.svg)](https://greenkeeper.io/)
 
 # Simpler Mapper
 
