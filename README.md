@@ -7,22 +7,28 @@
 
 # Simpler Mapper
 
-A recursive object-to-object mapper with optional mapping profiles.
+A recursive, object-to-object mapper with optional mapping profiles.
 
  - For straight name-for-name mapping, no profile is needed.
- - When you want to specify different source or destination names, value transformations,
-   beforeMap or afterMap callbacks, then you can use a profile.
+ - Use a profile for:
+   - specifying different source or destination names,
+   - value transformations,
+   - **beforeMap** or **afterMap** callbacks.
 
-Mapping profiles can be specified inline:
+## Usage
+
+Basic usage with a mapping profile:
 
 ```typescript
+import { Mapper } from 'simpler-mapper';
+
 // assumes class Accountant { ... } exists:
-let mapper = new Mapper();
 let mappingProfile = { exceptions: { homePhone: "cellPhone", fullname: p => p.First + " " + p.Last } };
+let mapper = new Mapper();
 let accountant = mapper.map(person, Accountant, mappingProfile);
 ```
 
-Or, you can implement `MapperProfile<TSource, TDest>` [see interface][mp] to improve maintainability:
+Or, you can implement the `MapperProfile<TSource, TDest>` [interface][mp] to improve maintainability:
 
 ```typescript
 class MyProfile implements MapperProfile<Person, Accountant> {
@@ -40,8 +46,8 @@ class MyProfile implements MapperProfile<Person, Accountant> {
 let mappingProfile = new MyProfile();
 ```
 
-In fact, a project can have many such mapping profiles, and they can inherit or
-be composed from each other to ease your workload.
+In fact, a project can have many such mapping profiles, and they can inherit from ([or
+be composed of][composition]) each other to ease your workload.
 
 Beyond lambdas and property name overrides, you can also specify beforeMap and afterMap callbacks:
 
@@ -51,7 +57,7 @@ let mappingProfile = { afterMap: (src, dest, p) => dest["key"] = "val" };
 let accountant = mapper.map(person, Accountant, mappingProfile);
 ```
 
-That's about it. Personally, this is all I've needed. Just how simple is Simpler Mapper?
+That's about it. Personally, this is all I've needed. Just how much simpler is Simpler Mapper?
 It's [one class][mapper], an [interface][mp], and [three][hook] [type definitions][excep].
 
 ## Installation
@@ -61,6 +67,7 @@ It's [one class][mapper], an [interface][mp], and [three][hook] [type definition
 ## History
 
 Q: Didn't you already make a mapper?
+
 A: Yes, but it wasn't simple/effective enough. It relied on annotations
    and wasn't very flexible.
 
@@ -68,3 +75,4 @@ A: Yes, but it wasn't simple/effective enough. It relied on annotations
 [mapper]: /src/lib/mapper.ts
 [hook]: /src/lib/models/mapping-hook.ts
 [excep]: /src/lib/models/mapping-exceptions.ts
+[composition]: https://en.wikipedia.org/wiki/Composition_over_inheritance
