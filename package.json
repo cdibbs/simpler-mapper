@@ -53,8 +53,8 @@
   },
   "nyc": {
     "include": [
-      "test/lib/*.js",
-      "test/lib/**/*.js"
+      "test/*.js",
+      "test/**/*.js"
     ],
     "extension": [
       ".js"
