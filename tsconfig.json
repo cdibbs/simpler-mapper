@@ -1,0 +1,32 @@
+{
+	"compilerOptions": {
+        "baseUrl": "./",
+		"experimentalDecorators": true,
+		"lib": ["es2015", "dom"],
+		"module": "commonjs",
+		"target": "es5",
+		"noImplicitAny": true,
+		"suppressImplicitAnyIndexErrors": true,
+		"moduleResolution": "node",
+		"emitDecoratorMetadata": true,
+		"sourceMap": false,
+		"declaration": true,
+		"outDir": "dist",
+		"removeComments": false,
+		"typeRoots": [
+			"node_modules/@types",
+			"src/lib/types"
+		],
+		"types": [
+			"@types/node"
+		]
+	},
+	"files": [
+		"src/index.ts"
+	],
+	"exclude": [
+		"node_modules",
+		"src/e2e/resources",
+		"src/spec-lib/**/*.ts"
+	]
+}
