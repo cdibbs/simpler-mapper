@@ -23,7 +23,7 @@
   "license": "MIT",
   "scripts": {
     "pretest": "tsc --project tsconfig-test.json",
-    "test": "alsatian --tap test/lib/*.spec.js",
+    "test": "alsatian --tap test/*.spec.js",
     "cover": "nyc npm test",
     "compodoc": "compodoc -p tsconfig.json",
     "e2e": "",

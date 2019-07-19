@@ -106,7 +106,8 @@ export class Mapper {
     ): TDest {
         let key: string;
         for(key in destObj) {
-            destObj[key] = sourceObj[key];
+            if (key in sourceObj)
+                destObj[key] = sourceObj[key];
         }
         return destObj;
     }
