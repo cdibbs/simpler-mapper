@@ -58,7 +58,7 @@ let accountant = mapper.map(person, Accountant, mappingProfile);
 ```
 
 That's about it. Personally, this is all I've needed. Just how much simpler is Simpler Mapper?
-It's [one class][mapper], an [interface][mp], and [three][hook] [type definitions][excep].
+It's [one class][mapper], and its supporting [interfaces][mp], and [type][hook] [definitions][excep].
 
 ## Installation
 
