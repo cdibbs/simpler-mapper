@@ -1,12 +1,13 @@
 import { MapperProfile } from './models/mapper-profile';
 import { MappingExceptionRule } from './models/mapping-exceptions';
+import { IMapper } from './i-mapper';
 
 /**
  * A recursive object-to-object mapper with optional profiles to specify
  * mapping overrides (anything other than straight, name-for-name copies),
  * beforeMap and afterMap callbacks, etc.
  */
-export class Mapper {
+export class Mapper implements IMapper {
     /**
      * Creates a new instance of destType with properties recursively mapped from sourceObj.
      * @param sourceObj The object to map from.
